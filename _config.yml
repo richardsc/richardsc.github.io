@@ -1,0 +1,26 @@
+# Dependencies
+markdown:         redcarpet
+highlighter:      pygments
+
+# Permalinks
+permalink:        pretty
+relative_permalinks: true
+
+# Setup
+title:            Booya
+tagline:          "Coded Ocean"
+description:      "It's the greenest place I've been"
+url:              
+baseurl:          http://richardsc.github.io/
+
+author:
+  name:           'Clark Richards'
+  url:            https://twitter.com/clarkgrichards
+
+paginate:         5
+
+# Custom vars
+version:          2.1.0
+
+github:
+  repo:           https://github.com/richardsc/richardsc.github.io
