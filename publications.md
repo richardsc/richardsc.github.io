@@ -5,7 +5,7 @@ title: Publications
 
 ## Refereed:
 
-**2015** Richards, C., and Straneo, F. *Observations of water mass transformation and eddies in the Lofoten Basin of the Nordic Seas.* Journal of Physical Oceanography. 45, 1735-1756 DOI:10.1175/JPO-D-14-0238.1
+**2015** Richards, C., and Straneo, F. *Observations of water mass transformation and eddies in the Lofoten Basin of the Nordic Seas.* Journal of Physical Oceanography. 45, 1735-1756. DOI:10.1175/JPO-D-14-0238.1
 
 **2014** Bourgault, D., Morsilli, M., Richards, C., Neumeier, U., and Kelley, D. *Sediment resuspension and nepheloid layers induced by long internal solitary waves shoaling orthogonally on uniform slopes.* Continental Shelf Research. 72, 21–33. DOI:10.1016/j.csr.2013.10.019
 
