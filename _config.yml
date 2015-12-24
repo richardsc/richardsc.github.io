@@ -7,9 +7,9 @@ permalink:        pretty
 relative_permalinks: true
 
 # Setup
-title:            Booya
+title:            Clark Richards
 tagline:          "Coded Ocean"
-description:      "It's the greenest place I've been"
+description:      "Ramblings about oceanography, coding, R, and other stuff"
 url:              
 baseurl:          http://richardsc.github.io/
 
