@@ -23,3 +23,11 @@ layout: default
     {% endfor %}
   </ul>
 </div>
+
+{% if site.twitter %}
+{% include twitter_button.html %}
+{% endif %}
+
+{% if site.facebook %}
+{% include facebook_button.html %}
+{% endif %}

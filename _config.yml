@@ -1,5 +1,5 @@
 # Dependencies
-markdown:         redcarpet
+markdown:         kramdown
 highlighter:      pygments
 
 # Permalinks
@@ -21,6 +21,14 @@ paginate:         5
 
 # Custom vars
 version:          2.1.0
+
+# set limit on number of post to appear on Home page
+homepostlimit: 4
+
+# Social Media
+twitter:          true # add a twitter button to each post
+facebook:         true # add a facebook share button to each post
+
 
 github:
   home:	          https://github.com/richardsc/
