@@ -23,4 +23,5 @@ paginate:         5
 version:          2.1.0
 
 github:
+  home:	          https://github.com/richardsc/
   repo:           https://github.com/richardsc/richardsc.github.io
