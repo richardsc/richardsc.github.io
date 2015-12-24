@@ -3,7 +3,7 @@ layout: page
 title: Links
 ---
 
-* [R](www.r-project.org)
-* [R/oce](dankelley.github.io/oce)
-* [Dan Kelley's blog](dankelley.github.io/blog)
+* [R](http://www.r-project.org)
+* [R/oce](http://dankelley.github.io/oce)
+* [Dan Kelley's blog](http://dankelley.github.io/blog)
 
