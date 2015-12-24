@@ -9,7 +9,7 @@ relative_permalinks: true
 # Setup
 title:            "Clark Richards, PhD"
 tagline:          "Coded Ocean"
-description:      "Ramblings about oceanography, coding, R, and other stuff"
+description:      "Oceanographer, father, musician, cyclist. Co-author of the Rstats oce package for ocean data analysis."
 url:              
 baseurl:          http://richardsc.github.io/
 
