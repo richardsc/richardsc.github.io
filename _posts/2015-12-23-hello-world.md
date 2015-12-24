@@ -15,3 +15,7 @@ So I can do neat things like:
 * ...
 
 ## Awesome!
+
+What happens if I do latex?
+
+$$ \alpha = \int_{-\infty}^{+\infty} \, f(x)\, dx $$
