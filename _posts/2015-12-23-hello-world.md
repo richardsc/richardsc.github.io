@@ -32,4 +32,4 @@ library(oce)
 data(ctd)
 theta <- swTheta(ctd)
 plot(ctd)
-{% endhighlight $}
+{% endhighlight %}
