@@ -15,7 +15,7 @@ In the ocean, seawater is constantly being transformed by physical processes. Fr
 <img alt="SLEIWEX mooring" src="{{ site.baseurl }}/../images/sleiwex_mooring.jpg" width="100">
 {% endcomment %}
 
-[{% img left alt="subglacial plume" %})/images/img_05073.jpg" width="100")
+[subglacial plume](/images/img_05073.jpg" width="100")
 
 {% comment %}
 <img alt="SLEIWEX survival" src="{{ site.baseurl }}/../images/sleiwex_survival.jpg" width="100">
