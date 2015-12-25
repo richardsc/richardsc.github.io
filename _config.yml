@@ -11,8 +11,8 @@ title:            "Clark Richards, PhD"
 tagline:          "Coded Ocean"
 description:      'Oceanographer, father, musician, cyclist. Co-author of the <a href="http://r-project.org">R</a> <a href="http://dankelley.github.io/oce">oce</a> package for ocean data analysis.'
 url:              "http://richardsc.github.io/"
-baseurl:	  ""
-baseurlknitr:     "/"
+baseurl:	  "http://richardsc.github.io"
+baseurlknitr:     "http://richardsc.github.io/"
 
 author:
   name:           'Clark Richards'
