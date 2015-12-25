@@ -9,7 +9,7 @@ relative_permalinks: true
 # Setup
 title:            "Clark Richards, PhD"
 tagline:          "Coded Ocean"
-description:      "Oceanographer, father, musician, cyclist. Co-author of the Rstats oce package for ocean data analysis."
+description:      "Oceanographer, father, musician, cyclist. Co-author of the <a href="http://r-project.org">R</a> <a href="http://dankelley.github.io/oce">oce</a> package for ocean data analysis."
 url:              
 baseurl:          http://richardsc.github.io/
 
@@ -28,7 +28,6 @@ homepostlimit: 4
 # Social Media
 twitter:          true # add a twitter button to each post
 facebook:         true # add a facebook share button to each post
-
 
 github:
   home:	          https://github.com/richardsc/
