@@ -3,6 +3,7 @@
 
 all:
 	Rscript -e "servr::jekyll('..')"
+	#Rscript -e "servr::jekyll('..', serve=FALSE)"
 
 clean:
 	rm -r ../_site
