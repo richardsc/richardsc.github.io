@@ -3,7 +3,7 @@ layout:  post
 title: "Sample Post"
 published:  true
 author: "Clark Richards"
-date: 2015-12-25 20:00:00
+date: 2012-12-25 20:00:00
 categories: [R]
 output:
   html_document:
@@ -38,7 +38,7 @@ summary(cars)
 You can also embed plots, for example: 
 
 
-![plot of chunk unnamed-chunk-3](/figure/./2015-12-25-sample-post/unnamed-chunk-3-1.png) 
+![plot of chunk unnamed-chunk-3](/figure/source/2012-12-25-sample-post/unnamed-chunk-3-1.png) 
 
 <p class = "figcaption">Here is a plot for you.</p>
 
