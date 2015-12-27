@@ -3,12 +3,16 @@ layout: page
 title: About
 ---
 
+**Clark Richards, PhD**  
+**email:** clark.richards@gmail.com  
+**twitter:** [@clarkgrichards](https://twitter.com/clarkgrichards)
+
 <img style="float: left" alt="subglacial plume" src="{{ site.baseurl }}images/img_05073.jpg" width="150">
 <img style="float: left" alt="SLEIWEX survival" src="{{ site.baseurl }}images/sleiwex_survival.jpg" width="150">
 <img style="float: left" alt="SLEIWEX mooring" src="{{ site.baseurl }}images/sleiwex_mooring.jpg" width="150">
 <p style="clear: both;">
 
-I am a physical oceanographer interested in how ocean water is mixed and transformed. I am currently working as Research Scientist with [RBR](www.rbr-global.com) in Ottawa, ON. 
+I am a physical oceanographer interested in how ocean water is mixed and transformed. I am currently working as Research Scientist with [RBR](http://www.rbr-global.com) in Ottawa, ON. 
 
 I obtained my PhD in physical oceanography in 2012 from Dalhousie University, working with Dr. Dan Kelley. I am also a co-author of the oce package for doing oceanographic analysis in R. My full CV can be found here.
 
