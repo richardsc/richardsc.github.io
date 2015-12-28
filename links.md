@@ -16,3 +16,4 @@ title: Links
 * [Ben Harden](http://www.sea.edu/academics/faculty_detail/dr._ben_harden)
 * [Polar Dispatches](http://polardispatches.org/)
 * [Salinometry](http://salinometry.com/)
+* [Marianne Corvellec](https://marianne-corvellec.appspot.com/)
