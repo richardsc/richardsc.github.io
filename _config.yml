@@ -16,8 +16,9 @@ baseurlknitr:	  /
 
 author:
   name:           'Clark Richards'
-  url:            https://twitter.com/clarkgrichards
-
+  url:            www.clarkrichards.org
+  twitter:	  https://twitter.com/clarkgrichards
+  
 paginate:         5
 
 # Custom vars
