@@ -11,7 +11,7 @@ title: Links
 
 ## Friends
 
-* [Dan Kelley's blog](http://dankelley.github.io/blog)
+* [Dan Kelley](http://dankelley.github.io/blog)
 * [Peter Gaube](http://gaubelab.org/)
 * [Ben Harden](http://www.sea.edu/academics/faculty_detail/dr._ben_harden)
 * [Polar Dispatches](http://polardispatches.org/)
