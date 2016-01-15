@@ -4,7 +4,6 @@ highlighter:      pygments
 
 # Permalinks
 permalink:        pretty
-relative_permalinks: true
 
 # Setup
 title:            "Clark Richards, PhD"
@@ -19,6 +18,8 @@ author:
   url:            www.clarkrichards.org
   twitter:	  https://twitter.com/clarkgrichards
   
+# Gems
+gems:             [jekyll-paginate]
 paginate:         5
 
 # Custom vars
