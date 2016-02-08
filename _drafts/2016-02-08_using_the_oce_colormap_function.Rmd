@@ -1,0 +1,22 @@
+---
+layout:  post
+title: "Using the oce colormap function in R"
+published: false
+author: "Clark Richards"
+date: 2016-02-08
+categories: [R, oce, plotting, colormap]
+output:
+  html_document:
+    mathjax:  default
+    fig_caption:  true
+---
+
+When I talk to fellow colleagues about why I use [R](www.r-project.org) as my language of choice for scientific data analysis, I typically point out all the advantages, and because I'm honest, the disadvantages.
+
+Typically the biggest disadvantage, especially for those coming from the java-GUI world of Matlab, is the non-interactive graphics. Now, I've managed to convince myself that I actually *prefer* making plots this way (because it forces me to script rather than noodling around with a mouse, the final plot is predictable, etc), but there are always a few things that I wish were easier.
+
+One of those is handling colors in "image" plots and in scatter plots. The former is usually handled pretty easily using the `oce` function `imagep(..., col=oceColorsJet)`, but the latter tends to be trickier. There is no base R functionality for automatically coloring points by some other attribute. I believe this is relatively easy to do with `ggplot2`, but that of course requires using `ggplot2`, which is not really an option for me (nothing against `ggplot2`, it just really isn't an option).
+
+## the `colormap()` function
+
+With that in mind, Dan and I set out to create a function that could be used to make an explicit "map" between colors and values so facilitate making plots, but also to ensure that the results of the plot are correct. The concept of a "colormap", as implemented in Matlab, where the information connecting colors to values is inherent in the plot attributes, doesn't exist in R. One can plot any colors one would like without thinking twice about whether they mean anything. On the one hand, this can be an advantage because it makes it easier to have [multiple colormaps in a single figure](http://www.mathworks.com/matlabcentral/answers/101346-how-do-i-use-multiple-colormaps-in-a-single-figure). 
