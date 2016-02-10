@@ -12,10 +12,10 @@ title: About
 <img style="float: left" alt="SLEIWEX mooring" src="{{ site.baseurl }}images/sleiwex_mooring.jpg" width="150">
 <p style="clear: both;">
 
-I am a physical oceanographer interested in how ocean water is mixed and transformed. I am currently working as Research Scientist with [RBR](http://www.rbr-global.com) in Ottawa, ON. 
+<p>I am a physical oceanographer interested in how ocean water is mixed and transformed. I am currently working as Research Scientist with <a href="http://www.rbr-global.com">RBR</a> in Ottawa, ON.</p>
 
-I obtained my PhD in physical oceanography in 2012 from Dalhousie University, working with Dr. Dan Kelley. I am also a co-author of the oce package for doing oceanographic analysis in R. My full CV can be found here.
+<p>I obtained my PhD in physical oceanography in 2012 from Dalhousie University, working with <a href="http://www.dal.ca/faculty/science/oceanography/people/faculty/daniel-e-kelley.html">Dr. Dan Kelley</a>. I am also a co-author of the <a href="http://dankelley.github.io/oce/">oce package</a> for doing oceanographic analysis in <a href="http://r-project.org">R</a>. </p>
 
-In the ocean, seawater is constantly being transformed by physical processes. From turbulence caused by internal waves in an estuary, to large-scale interaction with the atmosphere at high latitudes, to the very edge of the Greenland ice sheet, changes in temperature and salinity control the density of seawater, which in turn determines ocean currents. The scales involved range from 10’s of kilometers (warm eddies spun off from an unstable boundary current) to millimeters (the scale at which kinetic energy is dissipated by turbulence). My interests lie in obtaining measurements to reveal the details of these dynamic processes.
+<p>In the ocean, seawater is constantly being transformed by physical processes. From turbulence caused by internal waves in an estuary, to large-scale interaction with the atmosphere at high latitudes, to the very edge of the Greenland ice sheet, changes in temperature and salinity control the density of seawater, which in turn determines ocean currents. The scales involved range from 10’s of kilometers (warm eddies spun off from an unstable boundary current) to millimeters (the scale at which kinetic energy is dissipated by turbulence). My interests lie in obtaining measurements to reveal the details of these dynamic processes.</p>
 
 
