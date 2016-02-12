@@ -1,5 +1,20 @@
 /* You can customize here without going too deep. */
 
+/* Font size */
+html {
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+}
+@media (min-width: 48em) {
+  html {
+    font-size: 14px;
+  }
+}
+@media (min-width: 58em) {
+  html {
+    font-size: 16px;
+  }
+}
+
 /* Fix main content width. */
 @media (min-width: 48em) {
   .content {
