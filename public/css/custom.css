@@ -1,5 +1,12 @@
 /* You can customize here without going too deep. */
 
+/* Fix main content width. */
+@media (min-width: 48em) {
+  .content {
+    max-width: 64rem;
+  }
+}
+
 .commentcount {
   display: block;
   margin-top: -0.5rem;
