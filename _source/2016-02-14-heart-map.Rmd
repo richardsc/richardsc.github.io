@@ -1,0 +1,40 @@
+---
+layout:  post
+title: "A Valentine's day map"
+published: true
+author: "Clark Richards"
+date: 2016-02-14
+categories: [R, oce, maps]
+output:
+  html_document:
+    mathjax:  default
+    fig_caption:  true
+---
+
+In the spirit of Valentine's day, I made a map that uses the beautifully weird [`bonne`](https://en.wikipedia.org/wiki/Bonne_projection) projection. The code uses the `proj4` facilities in the [`oce`](http://dankelley.github.io/oce/) package.
+
+
+```{r, heartmap, message=FALSE}
+library(oce)
+data(coastlineWorld)
+
+msg <- "HAPPY VALENTINES DAY!"
+msgtop <- "You mean the WORLD to me"
+msglon <- 130
+msglat <- -30
+
+par(mar=c(1,1,1,1))
+mapPlot(coastlineWorld, col='pink', proj='+proj=bonne +lat_1=85',
+        xlim=c(-13700000, 13700000),
+        ylim=c(-18079625, 8008557))
+mapGrid(longitude = c(-180, 180), lwd=4, col=2, latitude=NULL)
+text(0, 8005400, msgtop, cex=2, font=3)
+nc <- nchar(msg)
+lon <- seq(-msglon, msglon, length.out = nc)
+rot <- seq(-45, 45, length.out = nc)
+for (i in 1:nc) {
+    mapText(lon[i], msglat, substr(msg, i, i), cex=2.2, font=2, srt=rot[i])
+    if (substr(msg, i, i+1) == 'ES')  mapText(1.02*lon[i], 0.8*msglat, "`", cex=2.2, font=2, srt=rot[i])
+}
+```
+
