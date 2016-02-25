@@ -1,0 +1,455 @@
+% beamer template plain
+
+\documentclass{beamer}
+
+\setbeamertemplate{navigation symbols}{}
+
+\mode<presentation>
+{
+  \usetheme{Boadilla}
+  % or ...
+
+  \setbeamercovered{transparent}
+  % or whatever (possibly just delete it)
+}
+
+\usepackage{color}
+\usepackage[english]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{times}
+\usepackage[T1]{fontenc}
+\usepackage{natbib}
+\def\newblock{\hskip .11em plus .33em minus .07em}
+\usepackage{fancybox}
+\usepackage{xspace}
+% Or whatever. Note that the encoding and the font should match. If T1
+% does not look nice, try deleting the line with the fontenc.
+
+\newcommand{\col}[1]{\color{red}\textbf{#1}\color{black}\xspace}
+\newcommand{\backupbegin}{
+   \newcounter{framenumbervorappendix}
+   \setcounter{framenumbervorappendix}{\value{framenumber}}
+}
+\newcommand{\backupend}{
+   \addtocounter{framenumbervorappendix}{-\value{framenumber}}
+   \addtocounter{framenumber}{\value{framenumbervorappendix}} 
+}
+
+
+\title[R and oce] % (optional, use only with long paper titles)
+{\includegraphics[width=2em]{logos/Rlogo.png}: A Software System for Oceanographic Work at the Interface}
+
+% \subtitle
+% {subtitle}
+
+% \author
+% {author}
+\author[Richards, Kelley]
+{Clark Richards\inst{1} \and Dan Kelley\inst{2}\\
+\includegraphics[width=4em]{logos/RBR}
+\hspace{3em}
+\includegraphics[width=2em]{logos/dal_logo_crest}}
+% - Use the \inst{?} command only if the authors have different
+%   affiliation.
+
+% \institute[abbrev] % (optional, but mostly needed)
+% {Institute}
+
+\institute[RBR/DAL]
+{\inst{1}%
+  RBR Ltd. \\
+  Ottawa, ON \\
+  \url{clarkrichards.org}
+  \and
+  \inst{2}%
+  Dalhousie University\\
+  Halifax, NS
+}
+
+\date% (optional)
+{2016-02-24}
+
+\subject{Talks}
+% This is only inserted into the PDF information catalog. Can be left
+% out. 
+
+
+
+% If you have a file called "university-logo-filename.xxx", where xxx
+% is a graphic format that can be processed by latex or pdflatex,
+% resp., then you can add a logo as follows:
+
+% \pgfdeclareimage[height=0.5cm]{university-logo}{dal_logo.pdf}
+% \logo{\pgfuseimage{university-logo}}
+
+% Delete this, if you do not want the table of contents to pop up at
+% the beginning of each subsection:
+% \AtBeginSubsection[]
+% {
+%   \begin{frame}<beamer>{Outline}
+%     \tableofcontents[currentsection,currentsubsection]
+%   \end{frame}
+% }
+
+
+% If you wish to uncover everything in a step-wise fashion, uncomment
+% the following command: 
+
+%\beamerdefaultoverlayspecification{<+->}
+
+
+\begin{document}
+<<setup, include=FALSE>>=
+library(knitr)
+opts_chunk$set(fig.align='center', fig.show='hold', size='footnotesize')
+knit_hooks$set(small.mar = function(before, options, envir) {
+    if (before) par(mar = c(3, 3, 0.5, 1), mgp=c(2, 0.75, 0), ps=10)
+})
+knit_hooks$set(biglabels = function(before, options, envir) {
+    if (before) par(mar = c(2, 2, 1, 0.5), mgp=c(2, 0.75, 0), ps=18)
+})
+@
+
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+% \begin{frame}{Outline}
+%   \tableofcontents
+%   % You might wish to add the option [pausesections]
+% \end{frame}
+
+
+\section{Introduction}
+
+\begin{frame}{}
+
+  \begin{center}
+  \Large
+  \textbf{Data analysis tools are as important to our work as the
+    instruments that collect the data}
+  \end{center}
+
+  \vspace{1em}
+  \pause
+  Increasingly scientists need to consider:
+  \begin{itemize}
+  \item code sharing (i.e. ``collaboration'')
+  \item public access
+  \item long-term access and reproducibility
+  \end{itemize}
+  
+\end{frame}
+
+\section{What is R?}
+  
+\begin{frame}{What is R?}{\url{www.r-project.org}}
+    
+  \begin{block}{\url{www.r-project.org}}
+    R is a free software environment for statistical computing and graphics.
+    
+    R is available as Free Software under the terms of the Free
+    Software Foundation's GNU General Public License in source code
+    form. It compiles and runs on a wide variety of UNIX platforms and
+    similar systems (including FreeBSD and Linux), Windows and MacOS.
+  \end{block}
+  
+  \begin{figure}
+    \centering
+    \includegraphics[height=0.3\textheight]{logos/Rlogo}
+  \end{figure}
+  
+\end{frame}
+
+\begin{frame}{Why R?}
+  
+  Community:
+  \begin{itemize}
+  \item Free (``as in beer'' and ``as in speech'')
+  \item Large (and growing), diverse user base (including non-geoscience)
+  \item Organized (R Core Team, R Foundation, R Consortium)
+  \end{itemize}
+    
+  \vspace{2em}
+  \pause
+  Technical:
+  \begin{itemize}
+  \item packages and the CRAN package repository
+  \item object orientation
+  \item reproducible research tools
+  \end{itemize}
+  
+\end{frame}
+
+
+\begin{frame}{Package system}
+  
+  \begin{figure}
+    \centering
+    \includegraphics[height=0.25\textheight]{images/package}
+  \end{figure}
+  \begin{block}{What is a ``package''?}
+    A rigorous and precise system for collecting functions and data that ensures:
+    \begin{itemize}
+    \item working code
+    \item accurate documentation
+    \item correct results (tests)
+    \item cross-platform
+    \end{itemize}
+  \end{block}
+  
+\end{frame}
+
+\begin{frame}{Comprehensive R Archive Network (CRAN)}
+  
+  \begin{figure}
+    \centering
+    \includegraphics[height=0.25\textheight]{images/cranberries}
+  \end{figure}
+  \begin{block}{CRAN}
+    A \textbf{\textit{curated}} repository for packages
+    \begin{itemize}
+    \item ensures dependency installation
+    \item archived versions
+    \item frequently updated and maintained
+    \item unambiguous copyright and license requirements (i.e. FOSS)
+    \item currently over 6000 packages available
+    \end{itemize}
+  \end{block}
+  
+\end{frame}
+
+\section{Packages}
+
+\begin{frame}{What's in a package?}
+  
+  \begin{itemize}
+  \item code (functions)
+  \item<2-> data
+  \item<3-> documentation
+  \item<4-> tests/examples/vignettes
+  \item<5-> dependency information (and other metadata)
+  \end{itemize}
+  \begin{figure}
+    \centering
+    %\includegraphics<1>[height=0.4\textheight]{images/mbari}   
+    \includegraphics<1>[height=0.4\textheight]{images/mbari}
+    \includegraphics<2>[height=0.4\textheight]{figure/maps-1}
+    %\includegraphics<3>[height=0.4\textheight]{images/help}
+    \includegraphics<3>[height=0.4\textheight]{images/mbari-help}
+    %\includegraphics<4>[height=0.4\textheight]{images/example}
+    \includegraphics<4>[height=0.4\textheight]{images/mbari-example}
+    \includegraphics<5->[height=0.4\textheight]{images/desc}
+  \end{figure}
+  
+\end{frame}
+
+\section{The oce package}
+
+\begin{frame}{The \textbf{oce} package}
+  
+  \begin{block}{What is \textbf{oce}?}
+    \textbf{Oce} is a package that helps Oceanographers by providing functions
+    to read Oceanographic data files, to process the data in
+    instrument-specific ways, and to represent the results with plots
+    that follow Oceanographic convention.
+  \end{block}
+  \centering
+  \url{dankelley.github.io/oce}
+  \begin{figure}
+    \centering
+    \includegraphics[width=0.9\textwidth]{images/oce}
+  \end{figure}
+  
+\end{frame}
+
+\section{Examples}
+
+\begin{frame}[fragile]{\textbf{oce} example}
+
+<<example, fig.show='hide', results='hide', small.mar=TRUE, fig.height=7, fig.width=7>>=
+## install.packages('oce')             # install from CRAN
+library(oce)                           # load the package
+data(ctd)                              # an example dataset
+plot(ctd)                              # default ctd plot
+@ 
+\vspace{-1em}
+  \begin{figure}
+    \centering
+    \includegraphics<1>[height=0.7\textheight]{figure/example-1}
+  \end{figure}
+
+\end{frame}
+
+\begin{frame}[fragile]{Working with CTD data \hspace{11em} \includegraphics[height=1.5em]{logos/ORP.jpg}}{Data collected in
+    Northwest Greenland by \url{OceanResearchProject.org}}
+
+  \begin{columns}[t]
+    \begin{column}{0.5\linewidth}
+<<example2, fig.show='hide', results='hide', small.mar=TRUE, fig.width=3.5, fig.height=4.5>>=
+library(oce)
+rsk <- read.oce('data/ORP.rsk')
+ctd <- as.ctd(rsk)
+plotScan(ctd)
+@ 
+\pause
+<<example3, fig.show='hide', results='hide', small.mar=TRUE, fig.width=3.5, fig.height=4.5>>=
+## trim the cast
+ctd <- ctdTrim(ctd, 
+  parameters=list(pmin=3))
+plotScan(ctd)
+@ 
+\pause
+<<example4, fig.show='hide', results='hide', small.mar=TRUE, fig.width=3.5, fig.height=4.5>>=
+## Plot some profiles
+plotProfile(ctd)
+@ 
+\end{column}
+\begin{column}{0.5\linewidth}
+  \vspace{-2em}
+  \begin{figure}
+    \centering
+    \includegraphics<1>[width=\textwidth]{figure/example2-1}
+    \includegraphics<2>[width=\textwidth]{figure/example3-1}
+    \includegraphics<3>[width=\textwidth]{figure/example4-1}
+  \end{figure}
+\end{column}
+\end{columns}
+
+\end{frame}
+
+\begin{frame}[fragile]{}
+  
+<<maps, include=FALSE, fig.show='hide', results='hide', small.mar=TRUE, fig.height=3.5, dev='png', dpi=150, dev.args=list(antialias='none'), eval=FALSE>>=
+library(ocedata)                    # extra data
+data(coastlineWorld); data(topoWorld); data(endeavour)
+cmap <- colormap(name='gmt_relief')    # setup a colormap
+drawPalette(colormap=cmap)             # draw the palette
+mapPlot(coastlineWorld, main='ETOPO+Endeavour') # draw a default map
+mapImage(topoWorld, colormap=cmap)     # image plot
+mapPoints(endeavour, pch=19, cex=0.5, col='red')
+@ 
+
+<<maps2, biglabels=TRUE, dev='png', dpi=150, dev.args=list(antialias='none'), out.height='2in', out.width='2in'>>=
+data(levitus)
+SSScmap <- colormap(levitus$SSS, breaks=seq(20, 36, 1),
+                    col=oceColorsSalinity, missingColor = NA)
+drawPalette(colormap=SSScmap)
+mapPlot(coastlineWorld, projection='+proj=stere +lat_0=90',
+        longitudelim = c(-180, 180), latitudelim = c(70, 90))
+mapImage(levitus$longitude, levitus$latitude, 
+         levitus$SSS, colormap=SSScmap, filledContour = TRUE)
+mapPolygon(coastlineWorld, col='grey'); mapGrid()
+@   
+
+
+\end{frame}
+
+\section{Final points}
+
+\begin{frame}{R and oce are user driven}
+  
+  \begin{itemize}
+  \item Development on Github 
+    \begin{itemize}
+    \item Issues/bugs/requests
+    \item Pull Requests
+    \end{itemize}
+  \end{itemize}
+  \url{https://github.com/dankelley/oce}
+  \begin{figure}
+    \centering
+    \includegraphics[height=0.6\textheight]{images/github}
+  \end{figure}
+\end{frame}
+
+\begin{frame}{Other useful ocean packages}
+  
+  \begin{itemize}
+  \item \col{ocedata} (extra data sets for oce)
+  \item \col{ncdf4} (read/write netcdf files)
+  \item \col{gsw} (TEOS-10 routines)
+  \item \col{rerddap} (Connect to the NOAA ERDDAP server)
+  \item \col{OceanView} (3D data/model visualization)
+  \item \col{marmap} (bathymetry data and mapping)
+  \item \col{seacarb} (seawater carbonate chemistry)
+  \item \col{signal} (time series tools, e.g. filters)
+  \item \col{fields} (spatial gridding/interpolation)
+  \item \col{deSolve} (differential equations)
+  \item \col{rpy2} (connect R and python)
+  \item ...
+  \end{itemize}
+  
+\end{frame}
+
+\begin{frame}{More resources}
+
+  \begin{itemize}
+  \item R in Nature:
+    \url{http://www.nature.com/news/programming-tools-adventures-with-r-1.16609?WT.ec_id=NATURE-20141225}
+    \vspace{1em}
+  \item Hadley Wickam
+    \begin{itemize}
+    \item Advanced R: \url{http://adv-r.had.co.nz/}
+    \item R packages: \url{http://r-pkgs.had.co.nz/}
+    \end{itemize}
+    \vspace{1em}
+  \item RStudio: \url{https://www.rstudio.com/}
+  \end{itemize}
+
+  \vspace{1em}
+  \centering
+  Thanks!
+  
+\end{frame}
+
+\backupbegin
+
+\begin{frame}[fragile]{Object orientation}{Example ctd object}
+  
+\begin{columns}
+  \begin{column}{0.3\textwidth}
+    \begin{itemize}
+    \item object classes
+    \item generic methods
+    \item \verb|plot()|, \verb|summary()|, \verb|subset()|
+    \end{itemize}
+  \end{column}
+  \begin{column}{0.7\textwidth}
+    \begin{figure}
+      \centering
+      \includegraphics[width=0.9\textheight]{images/ctd-object}
+    \end{figure}
+  \end{column}
+\end{columns}
+  
+\end{frame}
+
+
+\begin{frame}{Reproducible Research}
+  
+  \begin{figure}
+    \centering
+    \includegraphics[width=0.9\textheight]{images/rmarkdown}
+  \end{figure}
+  \begin{block}{Dynamic Documents}
+    \begin{itemize}
+    \item Seamless integration of text, code, and figures
+    \item Markdown or \LaTeX\ source (also Jupyter notebooks)
+    \item Output to various different formats (PDF, HTML, DOCX, ...)
+    \item This document is an example
+    \end{itemize}
+  \end{block}
+  
+\end{frame}
+
+\backupend
+
+% \begin{frame}{References}
+%   \scriptsize
+%   \bibliographystyle{plainnat}
+%   \bibliography{biblio_full}
+% \end{frame}
+
+\end{document}
