@@ -61,13 +61,10 @@ Note that I've gridded the argo fields so the matrices are at consistent pressur
 
 {% highlight r %}
 N2 <- function(x) {
-    ok <- !is.na(x)
-    approx(argo[['pressure']][ok,1],
-           swN2(argo[['pressure']][ok,1], x[ok], df=50),
-           argo[['pressure']][,1])$y
+    swN2(argo[['pressure']][,1], x, df=50)
 }
 {% endhighlight %}
-This looks a bit complicated because of some details of the object contents and of the $$ N^2 $$ calculation. First, `swN2()` can't handle missing values in the density, so we identify them with the logical `ok`. Then, because we want the final $$ N^2 $$ profile to be at the same pressure levels as the input (but without the missing levels), we use `approx()` to interpolate. Also note that we can access the vector of pressures with `argo[['pressure']][ok,1]` because in R functions can look "up" to the parent environment for unspecified variables.
+<!--This looks a bit complicated because of some details of the object contents and of the $$ N^2 $$ calculation. First, `swN2()` can't handle missing values in the density, so we identify them with the logical `ok`. Then, because we want the final $$ N^2 $$ profile to be at the same pressure levels as the input (but without the missing levels), we use `approx()` to interpolate. Also note that we can access the vector of pressures with `argo[['pressure']][ok,1]` because in R functions can look "up" to the parent environment for unspecified variables.-->
 
 Now we use the above function `N2` to calculate buoyancy frequency and add it back to the original object, like:
 
