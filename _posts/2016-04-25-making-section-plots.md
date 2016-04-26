@@ -57,14 +57,14 @@ Ok, cool. But what about some colors? Use the `ztype='image'` argument!
 
 {% highlight r %}
 plot(section, which='temperature', xtype='distance',
-     ztype='image', zcol=oceColorsTemperature)
+     ztype='image')
 {% endhighlight %}
 
 ![plot of chunk temperature2](/figure/source/2016-04-25-making-section-plots/temperature2-1.png)
 
 ## Finer control over the section plot
 
-To get finer control over the section plot that is possible with the `section` `plot()` method, one trick I will sometimes do is extract the data I want from the section as a gridded matrix, and then plot the matrix directly using the `imagep()` function.
+To get finer control over the section plot than is possible with the `section` `plot()` method, one trick I will sometimes do is extract the data I want from the section as a gridded matrix, and then plot the matrix directly using the `imagep()` function.
 
 First, we "grid" the section so that all the stations comprise the same pressure levels:
 

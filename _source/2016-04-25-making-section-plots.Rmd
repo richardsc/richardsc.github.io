@@ -52,12 +52,12 @@ plot(section, which='temperature', xtype='distance')
 Ok, cool. But what about some colors? Use the `ztype='image'` argument!
 ```{r temperature2, fig.height=3.5, warning=FALSE, dev.args=list(antialias='none')}
 plot(section, which='temperature', xtype='distance',
-     ztype='image', zcol=oceColorsTemperature)
+     ztype='image')
 ```
 
 ## Finer control over the section plot
 
-To get finer control over the section plot that is possible with the `section` `plot()` method, one trick I will sometimes do is extract the data I want from the section as a gridded matrix, and then plot the matrix directly using the `imagep()` function.
+To get finer control over the section plot than is possible with the `section` `plot()` method, one trick I will sometimes do is extract the data I want from the section as a gridded matrix, and then plot the matrix directly using the `imagep()` function.
 
 First, we "grid" the section so that all the stations comprise the same pressure levels:
 ```{r grid, warning=FALSE}
