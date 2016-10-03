@@ -4,7 +4,7 @@ title: About
 ---
 
 **Clark Richards, PhD**  
-**email:** clark.richards AT dfo-mpo.gc.ca / clark.richards AT gmail.com
+**email:** clark.richards AT dfo-mpo.gc.ca / clark.richards AT gmail.com  
 **twitter:** [@clarkgrichards](https://twitter.com/clarkgrichards)
 
 <img style="float: left" alt="subglacial plume" src="{{ site.baseurl }}images/img_05073.jpg" width="150">
