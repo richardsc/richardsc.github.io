@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Hello World!
+title: Hello World! 
 ---
 
 This is just a test post for my new github.io Jekyll site based on [poole/hyde](https://github.com/poole/hyde).
