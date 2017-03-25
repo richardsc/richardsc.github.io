@@ -1,0 +1,119 @@
+---
+layout:  post
+title: "Downloading and plot MODIS Chlorophyll-a data"
+published: true
+author: "Clark Richards"
+date: 2017-03-25
+categories: [R, oce, modis, chl, sp, raster]
+output:
+  html_document:
+    mathjax:  default
+    fig_caption:  true
+---
+
+
+
+I was recently asked for help with a project that involves correlating occurrences of marine animals found at the surface with satellite measurements of surface chlorophyll. Being a physical oceanographer, I'm not too familiar with the details of such data sets (though I did previously help someone [read in MODIS netcdf with the `oce` package](https://rpubs.com/clarkrichards/40319)), but saw it as a nice opportunity to learn a bit about a different data set, but also to gain some new data processing and plotting skills. 
+
+## MODIS Chla data
+
+The MODIS chlorophyll data are provided by NASA through the [OceanColor WEB](https://oceancolor.gsfc.nasa.gov/) site, which provides various manual ways of downloading binary files (e.g. hdf and netCDF) files. For the present application, which potentially required approximately 400 or so images, this wasn't a very appealing option.
+
+A quick google search turned up two very relevant (and fantastic looking!) packages, the [`spnc` package](https://github.com/BigelowLab/spnc) and the [`obpgcrawler` package](https://github.com/BigelowLab/obpgcrawler) (both authored by Ben Tupper from the [Bigelow Laboratory](https://www.bigelow.org/)). `spnc` provides some simplified methods for dealing with "spatial" datasets and netCDF files, and the `obpgcrawler` provides an interface for programmatically downloading various datasets from the NASA Ocean Biology Processing Group (including MODIS!).
+
+### Installing `spnc` and `obpgcrawler`
+
+As the packages are not on CRAN (yet?), they have to be installed using the `devtools` package (and of course all it's dependencies, etc). The `obpgcrawler` package also depends on another non-CRAN package, called [`threddscrawler`](https://github.com/BigelowLab/threddscrawler) which must be installed first. To install the packages, do:
+
+
+{% highlight r %}
+library(devtools)
+# if you don't have threddscrawler installed
+install_github("BigelowLab/threddscrawler")
+install_github("BigelowLab/obpgcrawler")
+install_github("BigelowLab/spnc")
+{% endhighlight %}
+
+There are some great examples provided on the Github pages, from which I built on to accomplish what I needed. The below example is pulled straight from the `obpgcrawler` page, to download a subset of the most recent MODIS data and plot it as a "raster" image (more on that later).
+
+
+{% highlight r %}
+library(obpgcrawler)
+library(spnc)
+library(raster)
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Loading required package: sp
+{% endhighlight %}
+
+
+
+{% highlight r %}
+query <- obpg_query(top = 'https://oceandata.sci.gsfc.nasa.gov/opendap/catalog.xml',
+   platform = 'MODISA', 
+   product = 'L3SMI',
+   what = 'most_recent',
+   greplargs = list(pattern='8D_CHL_chlor_a_4km', fixed = TRUE))
+q <- query[[1]]
+chl <- SPNC(q$url)
+bb <- c(xmin = -77, xmax = -63, ymin = 35, ymax = 46)
+r <- chl$get_raster(what = 'chlor_a', bb = bb)
+spplot(log10(r), main=paste('MODIS Chla for', format(chl$TIME, '%Y-%d-%m')))
+{% endhighlight %}
+
+![plot of chunk example](/figure/source/2017-03-25-modis-chl-data/example-1.png)
+
+## The animal data
+
+The animal data consists of a data frame containing: a date of observation, a longitude, and a latitude. To mimic the data set, I'll just create a single random point and time in the North Atlantic:
+
+
+{% highlight r %}
+library(latticeExtra) # for the `layer()` function
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Loading required package: lattice
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Loading required package: RColorBrewer
+{% endhighlight %}
+
+
+
+{% highlight r %}
+date <- as.Date('2017-02-25')
+lat <- 43.783179
+lon <- -62.860410
+query <- obpg_query(top = 'http://oceandata.sci.gsfc.nasa.gov/opendap/catalog.xml',
+                    platform = 'MODISA', 
+                    product = 'L3SMI',
+                    what = 'within',
+                    greplargs = list(pattern='8D_CHL_chlor_a_4km', fixed = TRUE),
+                    date_filter=c(date-3, date+4) ## find nearest image within one week
+                    )
+q <- query[[1]]
+bb <- c(lon-10, lon+10, lat-10, lat+10) # define a 10x10 degree box around the point
+chl <- SPNC(q$url, bb=bb)
+r <- chl$get_raster(what='chlor_a')
+p <- spplot(log10(r), main=paste0('Image=', format(chl$TIME)),
+            scales=list(draw=TRUE), auto.key=list(title="log10[chl]"))
+p <- p + layer(panel.points(lon, lat, pch=19, col=1, cex=2))
+print(p)
+{% endhighlight %}
+
+![plot of chunk animal-point](/figure/source/2017-03-25-modis-chl-data/animal-point-1.png)
+
+## Making plots
+
+
+
+## Things to figure out (`sp`, rasters, etc)
