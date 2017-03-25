@@ -34,6 +34,867 @@ data(section)
 section[['station']] <- lapply(section[['station']],
                                function(x) oceSetData(x, 'N2', swN2(x, df=100)))
 {% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 5
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 16
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 19
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 23
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 23
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 23
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 23
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 23
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 23
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 23
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 23
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 22
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 23
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 20
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 22
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 23
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 23
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 23
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 8
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 23
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 23
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 23
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 17
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 23
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 24
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 22
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 20
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 16
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 13
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 8
+{% endhighlight %}
 The line with the `lapply()` command takes the list of stations from the `section` object, and evaluates each of the resulting `ctd` objects using the `oceSetData()` function to add the result of `swN2()` back into the station `@data` slot.
 
 
@@ -44,7 +905,25 @@ col <- colorRampPalette(c('white', rev(oceColorsViridis(32))))
 plot(section, which='N2', ztype='image', zbreaks=seq(0, 1e-4, 0.5e-5), zcol=col)
 {% endhighlight %}
 
-![plot of chunk stationplot](/figure/source/2016-02-29-calculating-N2-for-argo-section-objects/stationplot-1.png) 
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 4
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 4
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Error in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): need at least four unique 'x' values
+{% endhighlight %}
 where I've defined a custom colormap just for the fun of it. 
 
 ## $$ N^2 $$ for `argo` objects
@@ -71,6 +950,34 @@ Now we use the above function `N2` to calculate buoyancy frequency and add it ba
 {% highlight r %}
 argo <- oceSetData(argo, 'N2', apply(swSigmaTheta(argo), 2, N2) )
 {% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 49
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 46
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 43
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning in smooth.spline(pressure[ok], sigmaTheta[ok], df = df): not
+## using invalid df; must have 1 < df <= n := #{unique x} = 44
+{% endhighlight %}
 Note that because of the difference between the "list" and "matrix" approach, the `oceSetData()` occurs *outside* of the `apply()`. Also note the second argument in the `apply()` call, which specifies to apply the `N2()` function along the 2nd dimension of the density matrix, i.e. along columns.
 
 Now, lets make a sweet plot of the `N2` field using `imagep()`!
@@ -84,6 +991,6 @@ imagep(t, p, t(argo[['N2']]), flipy=TRUE, col=col, breaks=seq(0, 1e-4, 1e-6),
        mar=c(3, 3, 2, 0.5))
 {% endhighlight %}
 
-![plot of chunk argoplot](/figure/source/2016-02-29-calculating-N2-for-argo-section-objects/argoplot-1.png) 
+![plot of chunk argoplot](/figure/source/2016-02-29-calculating-N2-for-argo-section-objects/argoplot-1.png)
 
 A thing of stratified beauty, if I do say so myself.

@@ -28,6 +28,11 @@ library(oce)
 
 {% highlight text %}
 ## Loading required package: methods
+{% endhighlight %}
+
+
+
+{% highlight text %}
 ## Loading required package: gsw
 {% endhighlight %}
 
@@ -35,6 +40,17 @@ library(oce)
 
 {% highlight r %}
 library(ocedata)
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Loading required package: testthat
+{% endhighlight %}
+
+
+
+{% highlight r %}
 data(levitus)
 data(coastlineWorld)
 cm <- colormap(levitus$SSS, col=oceColorsSalinity, breaks=seq(30, 37, 0.5))
@@ -47,7 +63,7 @@ mapGrid()
 title('Sea Surface Salinity')
 {% endhighlight %}
 
-![plot of chunk unnamed-chunk-2](/figure/source/2016-02-11-oce-version-0.9-18/unnamed-chunk-2-1.png) 
+![plot of chunk unnamed-chunk-2](/figure/source/2016-02-11-oce-version-0.9-18/unnamed-chunk-2-1.png)
 
 ## New features
 

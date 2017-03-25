@@ -41,6 +41,12 @@ Just to prove it, we can plot make a standard `ctd` plot of one of them, by acce
 plot(section[['station']][[100]])
 {% endhighlight %}
 
+
+
+{% highlight text %}
+## Loading required package: testthat
+{% endhighlight %}
+
 ![plot of chunk plotctd](/figure/source/2016-04-25-making-section-plots/plotctd-1.png)
 
 ## Making nice plots of the sections themselves
