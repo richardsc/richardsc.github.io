@@ -1,6 +1,6 @@
 ---
 layout:  post
-title: "Adding bottom profile to section plots"
+title: "Adding NOAA bottom profile to section plots"
 published: true
 author: "Clark Richards"
 date: 2017-04-01
