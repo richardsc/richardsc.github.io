@@ -35,7 +35,7 @@ To add a nicer looking profile to the bottom, we can take advantage of the aweso
 
 To add a nice looking bottom profile to our section plot, we can use the `getNOAA.bathy()` and `get.depth()` functions. Note the `resolution=1` argument, which downloads the highest resolution data available from NOAA (1 minute resolution), and the `keep=TRUE` argument, which saves a local copy of the data to prevent re-downloading every time the script is re-run (note that at 1 minute resolution the csv file obtained below is 29 MB):
 
-```{r marmap-example, fig.height=4}
+```{r marmap-example, message=FALSE, fig.height=4}
 library(marmap)
 lon <- section[["longitude", "byStation"]]
 lat <- section[["latitude", "byStation"]]

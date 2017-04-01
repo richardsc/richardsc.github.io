@@ -44,34 +44,6 @@ To add a nice looking bottom profile to our section plot, we can use the `getNOA
 
 {% highlight r %}
 library(marmap)
-{% endhighlight %}
-
-
-
-{% highlight text %}
-## 
-## Attaching package: 'marmap'
-{% endhighlight %}
-
-
-
-{% highlight text %}
-## The following object is masked from 'package:oce':
-## 
-##     plotProfile
-{% endhighlight %}
-
-
-
-{% highlight text %}
-## The following object is masked from 'package:grDevices':
-## 
-##     as.raster
-{% endhighlight %}
-
-
-
-{% highlight r %}
 lon <- section[["longitude", "byStation"]]
 lat <- section[["latitude", "byStation"]]
 lon1 <- min(lon) - 0.5
