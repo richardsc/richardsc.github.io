@@ -11,7 +11,7 @@ output:
     fig_caption:  true
 ---
 
-This entry is actually a re-post of a great blog I found written by Marcus Beck from ... It was such a great summary of the tidal analysis capabilities built in to the `oce` package, that I thought it would make a great addition to the (growing) library of posts here. The original post can be found [here](https://beckmw.wordpress.com/2017/04/12/predicting-tides-in-r/), but I've reproduced the Rmarkdown in it's entirety here with Marcus' permission (with a few minor format tweaks).
+This entry is actually a re-post of a great blog I found written by [Marcus Beck](https://twitter.com/fawda123). It was such a great summary of the tidal analysis capabilities built in to the `oce` package, that I thought it would make a great addition to the (growing) library of posts here. The original post can be found [here](https://beckmw.wordpress.com/2017/04/12/predicting-tides-in-r/), but I've reproduced the Rmarkdown in its entirety here with Marcus' permission (with a few minor format tweaks).
 
 # Overview 
 
