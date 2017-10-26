@@ -3,7 +3,7 @@ layout:  post
 title: "Bootstrapping uncertainties with the boot package"
 published: true
 author: "Clark Richards"
-date: 2017-04-14
+date: 2017-10-25
 categories: [R, boot, bootstrap, statistics]
 output:
   html_document:
