@@ -31,7 +31,7 @@ For the case of a `station` object (which is essentially a collection of `ctd` s
 library(oce)
 data(section)
 section[['station']] <- lapply(section[['station']],
-                               function(x) oceSetData(x, 'N2', swN2(x, df=100)))
+                               function(x) oceSetData(x, 'bvf', swN2(x)))
 ```
 The line with the `lapply()` command takes the list of stations from the `section` object, and evaluates each of the resulting `ctd` objects using the `oceSetData()` function to add the result of `swN2()` back into the station `@data` slot.
 
@@ -39,7 +39,7 @@ The line with the `lapply()` command takes the list of stations from the `sectio
 If we wanted to make a nice plot of the result, we could do:
 ```{r stationplot, fig.width=7, fig.height=3.5}
 col <- colorRampPalette(c('white', rev(oceColorsViridis(32))))
-plot(section, which='N2', ztype='image', zbreaks=seq(0, 1e-4, 0.5e-5), zcol=col)
+plot(section, which='bvf', ztype='image', zbreaks=seq(0, 1e-4, 0.5e-5), zcol=col)
 ```
 where I've defined a custom colormap just for the fun of it. 
 
@@ -55,7 +55,7 @@ argo <- argoGrid(argo)
 Note that I've gridded the argo fields so the matrices are at consistent pressure levels. Now we create a function that can be applied to each of the matrix columns, to calculate $$ N^2 $$ from a single column of the density matrix:
 ```{r argo-function}
 N2 <- function(x) {
-    swN2(argo[['pressure']][,1], x, df=50)
+    swN2(argo[['pressure']][,1], x)
 }
 ```
 <!--This looks a bit complicated because of some details of the object contents and of the $$ N^2 $$ calculation. First, `swN2()` can't handle missing values in the density, so we identify them with the logical `ok`. Then, because we want the final $$ N^2 $$ profile to be at the same pressure levels as the input (but without the missing levels), we use `approx()` to interpolate. Also note that we can access the vector of pressures with `argo[['pressure']][ok,1]` because in R functions can look "up" to the parent environment for unspecified variables.-->
