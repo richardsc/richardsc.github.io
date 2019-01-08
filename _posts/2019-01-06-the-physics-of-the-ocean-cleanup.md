@@ -79,7 +79,9 @@ Similarly, surface waves have been measured to cross oceans (i.e. the famous ["W
 
 ## Other issues
 
-Following the "rule of three", I tried to hit what I consider to be the biggest concerns with TOC system design and principle, from my perspective as a physical oceanographer. However, there are other issues that should be addressed, if the system as designed is really believed by the TOC team to be capable of doing what they say. And really, it seems like a crazy waste of time on behalf of everyone involved to have spent this much time on something that they aren't sure will even work *theoretically* ... not to mention the money spent thus far. Anyway, the other issues are:
+Following the "rule of three", I tried to hit what I consider to be the biggest concerns with TOC system design and principle, from my perspective as a physical oceanographer. However, there are other issues that should be addressed, if the system as designed is really believed by the TOC team to be capable of doing what they say. And really, it seems like a crazy waste of time on behalf of everyone involved to have spent this much time on something if they aren't sure it will even work *theoretically* ... not to mention the money spent thus far. So, part of me *has* to believe that all the dozens of people involved care deeply about making something that might actually work, and they have studied and considered all the effects and potential issues I (and others) have raised. 
+
+Anyway, the other issues are:
 
 * What is the actual response of the system to a rapid change in wind/wave direction? Wind can change direction pretty quickly, especially compared to ocean currents. What's to prevent a bunch of accumulated plastic getting blown out the open end of the U after a 180 degree shift in wind but before the system can re-orient?
 
