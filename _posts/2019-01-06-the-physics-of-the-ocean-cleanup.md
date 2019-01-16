@@ -49,7 +49,7 @@ The amount of drift depends nonlinearly on both the amplitude and the wavelength
 
 Of course, the Stokes' solution describes the motion of the water parcels being moved by the wave. For those water parcels to then have an effect on anything *in* the water, one would need to consider the various components of force/impulse/momentum (i.e. our buddy Sir Isaac Newton). Needless to say, it seems obvious that a smallish piece of neutrally buoyant plastic will respond to the Stokes drift much more readily than a 600m long floating cylinder with a large mass (and therefore large inertia).
 
-This alone could be enough to quash the idea of a passive propagating collection system. Mr Slat?
+This alone could be enough to quash the idea of a passive propagating collection system. 
 
 ### Ekman currents
 
