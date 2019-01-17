@@ -7,7 +7,7 @@ title: Links
 
 * [R](http://www.r-project.org)
 * [R/oce](http://dankelley.github.io/oce)
-* [oce@CRAN](http://https://cran.rstudio.com/web/packages/oce/index.html)
+* [oce@CRAN](https://cran.rstudio.com/web/packages/oce/index.html)
 
 ## Friends
 
