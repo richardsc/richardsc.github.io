@@ -4,3 +4,5 @@
 * Dan's book
 * R version of some of the stuff here: https://github.com/lnferris/ocean_data_tools
 * Southern Ocean Argo example (for rOpenSci SCAR task view) https://discuss.ropensci.org/t/building-an-antarctic-and-southern-ocean-ropensci-community/1451
+* log y axis for an `imagep()` plot
+* mapping! Especially Arctic mapping and bathymetry
