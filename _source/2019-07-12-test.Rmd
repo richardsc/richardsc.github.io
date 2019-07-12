@@ -1,0 +1,16 @@
+---
+layout:  post
+title: "Test"
+published: true
+author: "Clark Richards"
+date: 2019-07-12
+categories: [test]
+output:
+  html_document:
+    mathjax:  default
+    fig_caption:  true
+---
+
+## Introduction
+
+This is a test
