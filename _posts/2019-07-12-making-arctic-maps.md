@@ -4,7 +4,7 @@ title: "Using the oce package to make nice maps"
 published: true
 author: "Clark Richards"
 date: 2019-07-12
-categories: [oce, mapping, arctic, marmap]
+categories: [oce]
 output:
   html_document:
     mathjax:  default
@@ -158,19 +158,7 @@ b <- as.topo(getNOAA.bathy(-180, 0, 55, 90, keep=TRUE))
 
 
 {% highlight text %}
-## Querying NOAA database ...
-{% endhighlight %}
-
-
-
-{% highlight text %}
-## This may take seconds to minutes, depending on grid size
-{% endhighlight %}
-
-
-
-{% highlight text %}
-## Building bathy matrix ...
+## File already exists ; loading 'marmap_coord_-180;55;0;90_res_4.csv'
 {% endhighlight %}
 
 
