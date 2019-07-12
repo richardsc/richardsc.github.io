@@ -4,7 +4,6 @@ title: "Using the oce package to make nice maps"
 published: true
 author: "Clark Richards"
 date: 2019-07-12
-categories: [oce]
 output:
   html_document:
     mathjax:  default
