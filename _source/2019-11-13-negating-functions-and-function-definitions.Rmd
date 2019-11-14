@@ -1,0 +1,74 @@
+---
+layout:  post
+title: "Negating functions and function definitions: an 'opposite' function to the wonderful `%in%` operator"
+published: true
+author: "Clark Richards"
+date: 2019-11-13
+output:
+  html_document:
+    mathjax:  default
+    fig_caption:  true
+---
+
+## Introduction
+
+R has some neat functions, and even some weird quirks, that you aren't likely to discover on your own but can either be immensely helpful or horribly confounding. 
+
+For example, the "+" operator (i.e. addition) is actually a *function*, and can even be called using the typical "bracket" notation:
+```{r}
+1 + 2
+```
+We can use backticks to evaluate the function as a "regular" function:
+```{r}
+`+`
+```
+And can therefore call it as a "regular" function, using brackets to pass the arguments:
+```{r}
+`+`(1, 2)
+```
+
+One consequence of this is that it is possible to redefine how "+" works:
+```{r}
+`+` <- function(x1, x2) x1 - x2
+1 + 2
+```
+
+Ok ... admittedly that's confusing. Why would you want to redefine "+"? Well, one example is given by the syntax of the [`ggplot2`](https://ggplot2.tidyverse.org/) package, which defines it's own version of "+" that lets you string plotting functions together to build up a plot (e.g. see my post about plotting [here]({% post_url 2017-12-11-recording-plots %})).
+
+## The `%in%` function
+
+The `%in%` function is one of those functions that just *clicked* when I started using R. It's an elegant way to write conditional statements -- it checks whether the object to the left of the operator occurs anywhere in the object on the right of the operator. An example:
+
+Does the number 5 occur in the vector of 1 through 10?
+```{r}
+5 %in% 1:10
+```
+Yes, it does (obviously).
+
+One thing that I often find myself doing however, is wanting to know if something *doesn't* occur in another object. To make that work, I usually wrap the whole statement in brackets and then precede with an `!` operator (logical negation). Like this:
+```{r}
+!(11 %in% 1:10)
+```
+This evaluates to `TRUE` because 11 is **not** in the vector 1:10. While this works, it's always bugged me because it just looks inelegant.
+
+Well, while browsing Twitter recently, I came across this post from [@groundwalkergmb](https://twitter.com/groundwalkergmb):
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Am I the only one that always does <br><br>if(!(blah %in% woo)) <br><br>instead of <br><br>if(!blah %in% woo) <br><br>because the latter makes me really uncomfortable even though it works fine (and equivalently to the former)? <a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=twsrc%5Etfw">#rstats</a></p>&mdash; Gabe Becker (@groundwalkergmb) <a href="https://twitter.com/groundwalkergmb/status/1194698809760108544?ref_src=twsrc%5Etfw">November 13, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+First, note the (confusing) syntax that you don't actually have to negate the entire expression. It is equivalent to write:
+```{r}
+!11 %in% 1:10
+```
+Ew. Gross! (@groundwalkergmb agrees with me about this)
+
+But reading through the comments led me to this one:
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">`%nin% &lt;- Negate(`%in%`)<br><br>if(blah %nin% woo) {}</p>&mdash; Brandon Hurr (@bhive01) <a href="https://twitter.com/bhive01/status/1194703071193878528?ref_src=twsrc%5Etfw">November 13, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+Basically, you can use the `Negate()` function (never knew about this before) to create a *new* function which returns the logical negation of the output of the original.
+```{r}
+`%nin%`<- Negate(`%in%`)
+11 %nin% 1:10
+```
+
+<blockquote class="twitter-tweet" data-conversation="none"><p lang="en" dir="ltr">What?!? <a href="https://t.co/24udunAkgV">pic.twitter.com/24udunAkgV</a></p>&mdash; Clark Richards, PhD (@ClarkGRichards) <a href="https://twitter.com/ClarkGRichards/status/1194756668774658048?ref_src=twsrc%5Etfw">November 13, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
