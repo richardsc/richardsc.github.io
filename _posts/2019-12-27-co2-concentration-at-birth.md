@@ -4,6 +4,7 @@ title: "CO2 concentration at birth"
 published: true
 author: "Clark Richards"
 date: 2019-12-27
+categories: [R, co2]
 output:
   html_document:
     mathjax:  default
