@@ -1,0 +1,27 @@
+---
+layout:  post
+title: "Reading and working with BGC Argo data"
+published: true
+author: "Clark Richards"
+date: 2019-12-08
+output:
+  html_document:
+    mathjax:  default
+    fig_caption:  true
+---
+
+* where to find BGC Argo data
+* SOCCOM
+* ODV txt vs Argo NetCDF
+* bioArgo package (outdated), which reads the ODV files
+* find, load, subset, and summarize some BGCArgo data
+
+# Introduction
+
+
+
+# Reading Argo data with the `oce` package
+
+
+
+# 
