@@ -13,7 +13,7 @@ output:
 
 # Introduction 
 
-There is a recent trend in places like Twitter to include in your bio the atmospheric CO2 concentration when you were born. I like it, since it is both a neat measure of both the range of ages of people that you can interact with (without being really about *age* per se), but also since it is a sobering reminder of just how much damage we as a species have done in a very short amount of time.
+There is a recent trend in places like Twitter to include in your bio the atmospheric CO2 concentration when you were born. I like it, since it is both a neat measure of the range of ages of people that you can interact with (without being really about *age* per se), and also since it is a sobering reminder of just how much damage we as a species have done in a very short amount of time.
 
 Anyway, there's nothing overly complicated about figuring this out -- probably a simple Google search would be enough to tell me what the atmospheric concentration of CO2 was when I was born. But where's the fun in that? :)
 
