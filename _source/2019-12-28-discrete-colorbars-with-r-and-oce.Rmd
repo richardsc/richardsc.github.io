@@ -63,3 +63,30 @@ drawPalette(colormap=cm)
 sI <- sample(seq_along(cm$zcol))
 plotTS(with(levitus, as.ctd(SSS[sI], SST[sI], 0)), pch=19, col=cm$zcol[sI], mar=par('mar'))
 ```
+
+## Custom color palettes with `colormap()`
+
+In addition to the "known" color palettes that are included in R and `oce` (see also the `cmocean` package below, as well as `RcolorBrewer`), the `colormap()` function has arguments that allow for custom-built palettes. Specifically the `x0`, `x1`, `col0` and `col1` arguments, which are detailed in the help file as:
+
+```
+x0, x1, col0, col1: Vectors that specify a color map.  They must all be
+          the same length, with ‘x0’ and ‘x1’ being numerical values,
+          and ‘col0’ and ‘col1’ being colors.  The colors may be
+          strings (e.g. ‘"red"’) or colors as defined by rgb or
+          hsv.
+```
+
+The idea is that the `x0` values define the numeric level of the *bottom* of the color ranges, the `x1` values define the *top* of the color ranges, and the `col0` and `col1` the colors associated with the levels. An example:
+
+```{r}
+cm <- colormap(expand.grid(levitus$latitude, levitus$longitude)[,1],
+               x0=c(-90, -45, 0, 45), x1=c(-45, 0, 45, 90),
+               col0=c(1, 2, 3, 4), col1=c(2, 3, 4, 5))
+drawPalette(colormap=cm)
+sI <- sample(seq_along(cm$zcol))
+plotTS(with(levitus, as.ctd(SSS[sI], SST[sI], 0)), pch=19, col=cm$zcol[sI], mar=par('mar'))
+```
+
+(Note that to make the above plot, I had to fix a [bug](https://github.com/dankelley/oce/pull/1644) in `oce` that was making the `zcol` come out as "black" for all cases. Either build oce from source, or wait for the update to get pushed to CRAN in a month or two).
+
+# Other color options -- the `cmocean` package
