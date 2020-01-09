@@ -15,7 +15,7 @@ output:
 
 Making plots in oceanography (or anything, really) often requires creating some kind of "color map" -- that is, having a color represent a field in a plot that is otherwise two-dimensional. Frequently this is done when making "image"-style plots (known in MatlabTM parlance as "pcolor" or pseudocolor plots), but could also be in coloring points on a 2D scatter plot based on a third variable (e.g. a TS plot with points colored for depth).
 
-There are a whole bunch of different ways to make use colormaps in R, including various approaches that are derived from the "tidyverse" and `ggplot2` package for analyzing and plotting data. I don't really use that approach for most of my work, so won't touch on them here.
+There are a whole bunch of different ways to make colormaps in R, including various approaches that are derived from the "tidyverse" and `ggplot2` package for analyzing and plotting data. I don't really use that approach for most of my work, so won't touch on them here.
 
 Instead, the purpose of this post (inspired by a question from a colleague who I know is a Matlab and Python user) is to show some of the ways various functions contained in the [`oce`](https://dankelley.github.io/oce) package cab be used to make colormaps and colorbars (or "palettes"). In particular, for the case where one wants a "discrete" (i.e. not continuous) colormap.
 
@@ -89,6 +89,8 @@ str(cm)
 ##  $ col1        : chr [1:18] "#440154" "#481769" "#472A7A" "#433D84" ...
 ##  $ zclip       : logi FALSE
 ##  $ colfunction :function (z)  
+##   ..- attr(*, "srcref")= 'srcref' int [1:8] 853 24 855 5 24 5 20257 20259
+##   .. ..- attr(*, "srcfile")=Classes 'srcfilealias', 'srcfile' <environment: 0x7fffee4dbc60> 
 ##  - attr(*, "class")= chr [1:2] "list" "colormap"
 {% endhighlight %}
 Some of those fields are obvious (some probably aren't to inexperienced users) but one field that is handy to know about is the `zcol` field. This encodes a color for every value in the original object based on the colormap specification. So, we can make a plot with the points colored based on the colormap using the argument `col=cm$zcol`. We can also add the palette to the plot using the `drawPalette()` function, which has to be called *before* the main plot:
@@ -109,3 +111,32 @@ plotTS(with(levitus, as.ctd(SSS[sI], SST[sI], 0)), pch=19, col=cm$zcol[sI], mar=
 {% endhighlight %}
 
 ![plot of chunk unnamed-chunk-5](/figure/source/2019-12-28-discrete-colorbars-with-r-and-oce/unnamed-chunk-5-1.png)
+
+## Custom color palettes with `colormap()`
+
+In addition to the "known" color palettes that are included in R and `oce` (see also the `cmocean` package below, as well as `RcolorBrewer`), the `colormap()` function has arguments that allow for custom-built palettes. Specifically the `x0`, `x1`, `col0` and `col1` arguments, which are detailed in the help file as:
+
+```
+x0, x1, col0, col1: Vectors that specify a color map.  They must all be
+          the same length, with ‘x0’ and ‘x1’ being numerical values,
+          and ‘col0’ and ‘col1’ being colors.  The colors may be
+          strings (e.g. ‘"red"’) or colors as defined by rgb or
+          hsv.
+```
+
+The idea is that the `x0` values define the numeric level of the *bottom* of the color ranges, the `x1` values define the *top* of the color ranges, and the `col0` and `col1` the colors associated with the levels. An example:
+
+
+{% highlight r %}
+cm <- colormap(expand.grid(levitus$latitude, levitus$longitude)[,1],
+               x0=c(-90, -45, 0, 45), x1=c(-45, 0, 45, 90),
+               col0=c(1, 2, 3, 4), col1=c(2, 3, 4, 5))
+drawPalette(colormap=cm)
+sI <- sample(seq_along(cm$zcol))
+plotTS(with(levitus, as.ctd(SSS[sI], SST[sI], 0)), pch=19, col=cm$zcol[sI], mar=par('mar'))
+{% endhighlight %}
+
+![plot of chunk unnamed-chunk-6](/figure/source/2019-12-28-discrete-colorbars-with-r-and-oce/unnamed-chunk-6-1.png)
+
+(Note that to make the above plot, I had to fix a [bug](https://github.com/dankelley/oce/pull/1644) in `oce` that was making the `zcol` come out as "black" for all cases. Either build oce from source, or wait for the update to get pushed to CRAN in a month or two).
+

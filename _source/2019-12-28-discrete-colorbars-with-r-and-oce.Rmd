@@ -15,7 +15,7 @@ output:
 
 Making plots in oceanography (or anything, really) often requires creating some kind of "color map" -- that is, having a color represent a field in a plot that is otherwise two-dimensional. Frequently this is done when making "image"-style plots (known in MatlabTM parlance as "pcolor" or pseudocolor plots), but could also be in coloring points on a 2D scatter plot based on a third variable (e.g. a TS plot with points colored for depth).
 
-There are a whole bunch of different ways to make use colormaps in R, including various approaches that are derived from the "tidyverse" and `ggplot2` package for analyzing and plotting data. I don't really use that approach for most of my work, so won't touch on them here.
+There are a whole bunch of different ways to make colormaps in R, including various approaches that are derived from the "tidyverse" and `ggplot2` package for analyzing and plotting data. I don't really use that approach for most of my work, so won't touch on them here.
 
 Instead, the purpose of this post (inspired by a question from a colleague who I know is a Matlab and Python user) is to show some of the ways various functions contained in the [`oce`](https://dankelley.github.io/oce) package cab be used to make colormaps and colorbars (or "palettes"). In particular, for the case where one wants a "discrete" (i.e. not continuous) colormap.
 
@@ -89,4 +89,3 @@ plotTS(with(levitus, as.ctd(SSS[sI], SST[sI], 0)), pch=19, col=cm$zcol[sI], mar=
 
 (Note that to make the above plot, I had to fix a [bug](https://github.com/dankelley/oce/pull/1644) in `oce` that was making the `zcol` come out as "black" for all cases. Either build oce from source, or wait for the update to get pushed to CRAN in a month or two).
 
-# Other color options -- the `cmocean` package
