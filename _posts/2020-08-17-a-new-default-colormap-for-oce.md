@@ -64,26 +64,11 @@ library(ocedata)
 library(cmocean)
 data(levitus)
 par(mfrow=c(1, 2))
-with(levitus, imagep(longitude, latitude, SST, col=cmocean('thermal', main=SST)))
+with(levitus, imagep(longitude, latitude, SST, col=cmocean('thermal'), main="sea surface temperature"))
+with(levitus, imagep(longitude, latitude, SST, col=cmocean('haline'), main="sea surface salinity"))
 {% endhighlight %}
 
-
-
-{% highlight text %}
-## Error in cmocean("thermal", main = SST): unused argument (main = SST)
-{% endhighlight %}
-
-
-
-{% highlight r %}
-with(levitus, imagep(longitude, latitude, SST, col=cmocean('haline', main=SSS)))
-{% endhighlight %}
-
-
-
-{% highlight text %}
-## Error in cmocean("haline", main = SSS): unused argument (main = SSS)
-{% endhighlight %}
+![plot of chunk unnamed-chunk-2](/figure/source/2020-08-17-a-new-default-colormap-for-oce/unnamed-chunk-2-1.png)
 
 There is also the [`viridis` package](https://cran.rstudio.com/web/packages/viridis/index.html) itself, which makes the series of palettes developed for matplotlib available in R.
 
